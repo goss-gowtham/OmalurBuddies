@@ -1,0 +1,17 @@
+{
+  "name": "@forresto/collapsible-tree-with-photos",
+  "main": "0120f9c8efc10d86@616.js",
+  "version": "616.0.0",
+  "homepage": "https://observablehq.com/@forresto/collapsible-tree-with-photos",
+  "author": {
+    "name": "Forrest Oliphant",
+    "url": "https://observablehq.com/@forresto"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  },
+  "dependencies": {
+    "@observablehq/runtime": "^4.7.0"
+  }
+}
