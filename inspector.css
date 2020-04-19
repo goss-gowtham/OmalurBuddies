@@ -92,3 +92,7 @@ body {
     color: black;
     font-size: 25px;
   }
+
+  #tree {
+    max-height: 100%;
+  }
