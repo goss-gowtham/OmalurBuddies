@@ -96,3 +96,7 @@ body {
   #tree {
     max-height: 100%;
   }
+
+  svg {
+    max-height: 100%;
+  }
