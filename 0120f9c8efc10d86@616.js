@@ -645,7 +645,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
     id: 'daiia',
     name: 'Nakshatra',
     title: '👧',
-    parent: 'da',
+    parent: 'daii',
     img: ''
   },
   {
