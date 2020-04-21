@@ -4,17 +4,7 @@ import define1 from "./81ee2b72e850ad42@794.js";
 export default function define(runtime, observer) {
   const main = runtime.module();
   main.variable(observer()).define(["md"], function(md){return(
-md`# Collapsible Tree with Photos
-
-Click photos to expand or collapse [the tree](/@d3/tidy-tree).
-
-See [flatData](#flatData) for how the tree data is defined.
-
-## Todo
-
-- [x] Photos
-- [x] Shift-click to toggle all siblings
-- [x] Don't lose state on resize
+md`# Omalur Family Tree - Collapsible
 `
 )});
   main.variable(observer("chart")).define("chart", ["treeData","dy","dx","d3","margin","svgWidth","tree","width","diagonal"], function(treeData,dy,dx,d3,margin,svgWidth,tree,width,diagonal)
@@ -29,7 +19,7 @@ See [flatData](#flatData) for how the tree data is defined.
     .create("svg")
     .attr('width',"100%")
     .attr('height','100%')
-    .attr("viewBox", [-margin.left, -margin.top, svgWidth, dx/2])
+    .attr("viewBox", [0, 0, svgWidth, dx/2])
     .style("font", "16px sans-serif")
     .style("user-select", "none");
   console.log("This site is developed by Gowthamnarayanan S")
@@ -44,7 +34,7 @@ See [flatData](#flatData) for how the tree data is defined.
   const gLink = svg
     .append("g")
     .attr("fill", "none")
-    .attr("stroke", "#0000ff")
+    .attr("stroke", "#0f0")
     .attr("stroke-opacity", 0.45)
     .attr("stroke-width", 1);
 
@@ -52,6 +42,19 @@ See [flatData](#flatData) for how the tree data is defined.
     .append("g")
     .attr("cursor", "pointer")
     .attr("pointer-events", "all");
+    // Collapse after the second level
+    root.children.forEach(collapse);
+
+    update(root);
+
+    // Collapse the node and all it's children
+    function collapse(d) {
+      if(d.children) {
+        d._children = d.children
+        d._children.forEach(collapse)
+        d.children = null
+      }
+    }
 
   function update(source, duration = 250) {
     const nodes = root.descendants().reverse();
@@ -72,7 +75,7 @@ See [flatData](#flatData) for how the tree data is defined.
     const transition = svg
       .transition()
       .duration(duration)
-      .attr("viewBox", [-margin.left*0.5, left.x - margin.top*4, width, height*4])
+      .attr("viewBox", [-margin.left*0.7, left.x - margin.top*4, width, height*4])
       .tween(
         "resize",
         window.ResizeObserver ? null : () => () => svg.dispatch("toggle")
@@ -80,7 +83,8 @@ See [flatData](#flatData) for how the tree data is defined.
 
     // Update the nodes…
     const node = gNode.selectAll("g").data(nodes, d => d.id);
-
+    console.log(node);
+    
     // Enter any new nodes at the parent's previous position.
     const nodeEnter = node
       .enter()
@@ -95,6 +99,7 @@ See [flatData](#flatData) for how the tree data is defined.
         if (d3.event && d3.event.shiftKey && d.parent) {
           // Toggle all siblings at this level
           d.parent.children.forEach((node, i) => {
+            
             // TODO extract the data/state/view and use async stuff here?
             setTimeout(() => {
               node.children = toggleOpen ? node._children : null;
@@ -110,9 +115,9 @@ See [flatData](#flatData) for how the tree data is defined.
     nodeEnter
       .append("circle")
       .attr("r", radius*2)
-      .attr("fill", "#eee")
+      .attr("fill", "#eefcd2")
       .attr("stroke", d => (d._children ? "#0f0" : "#00f"))
-      .attr("stroke-width", 4);
+      .attr("stroke-width", 3);
 
     nodeEnter
       .append("svg:image")
@@ -141,7 +146,7 @@ See [flatData](#flatData) for how the tree data is defined.
       .clone(true)
       .lower()
       .attr("stroke-linejoin", "round")
-      .attr("stroke-width", 3)
+      .attr("stroke-width", 0)
       .attr("stroke", "white");
 
     // Title
@@ -156,8 +161,8 @@ See [flatData](#flatData) for how the tree data is defined.
       .clone(true)
       .lower()
       .attr("stroke-linejoin", "round")
-      .attr("stroke-width", 3)
-      .attr("stroke", "white")
+      .attr("stroke-width", 1)
+      .attr("stroke", "#eee")
       .append("tspan")
       .attr("dy", "0.3em");
 
@@ -221,6 +226,9 @@ See [flatData](#flatData) for how the tree data is defined.
       d.x0 = d.x;
       d.y0 = d.y;
     });
+
+
+
   }
 
   update(root);
@@ -262,14 +270,14 @@ d3.tree().nodeSize([dx*2, dy*1.2])
     name: 'Venugopal',
     title: 'Sampoorani',
     parent: 'a',
-    img: ''
+    img: './images/Venugopal/Venugopal.jpg'
   },
   {
     id: 'e',
     name: 'Gurusamy',
     title: 'Santha',
     parent: 'a',
-    img: ''
+    img: './images/Gurusamy/Gurusamy.jpg'
   },
   {
     id: 'f',
@@ -304,7 +312,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
     name: 'Ramdass',
     title: 'Indrani',
     parent: 'a',
-    img: ''
+    img: './images/Ramdass/Ramdass.jpg'
   },
   {
     id: 'k',
@@ -330,14 +338,14 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'baia',
     name: 'Narotham',
-    title: '🧒',
+    title: '👨',
     parent: 'bai',
     img: ''
   },
   {
     id: 'baib',
     name: 'Gopal',
-    title: '🧒',
+    title: '👨',
     parent: 'bai',
     img: ''
   },
@@ -351,7 +359,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'baiia',
     name: 'Madhav',
-    title: '🧒',
+    title: '👨',
     parent: 'baii',
     img: ''
   },
@@ -372,14 +380,14 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'bbia',
     name: 'Devas',
-    title: '🧒',
-    parent: 'bai',
+    title: '👨',
+    parent: 'bbi',
     img: ''
   },
   {
     id: 'bbii',
     name: 'Jagadeeshwaran',
-    title: '🧒',
+    title: '👨',
     parent: 'bb',
     img: ''
   },
@@ -413,14 +421,14 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'bciia',
     name: 'Lakshana',
-    title: '🧒',
+    title: '👨',
     parent: 'bcii',
     img: ''
   },
   {
     id: 'bciib',
     name: 'Sanjeev',
-    title: '🧒',
+    title: '👨',
     parent: 'bcii',
     img: ''
   },
@@ -434,7 +442,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'bciiia',
     name: 'Audvik',
-    title: '🧒',
+    title: '👨',
     parent: 'bciii',
     img: ''
   },
@@ -462,7 +470,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'bdib',
     name: 'Ganesh Raj',
-    title: '🧒',
+    title: '👨',
     parent: 'bdi',
     img: ''
   },
@@ -476,14 +484,14 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'bdiia',
     name: 'Iyappa',
-    title: '🧒',
+    title: '👨',
     parent: 'bdii',
     img: ''
   },
   {
     id: 'bdiib',
     name: 'Yugendra',
-    title: '🧒',
+    title: '👨',
     parent: 'bdii',
     img: ''
   },
@@ -497,15 +505,15 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'bdiiia',
     name: 'Kamali',
-    title: '🧒',
-    parent: 'bdii',
+    title: '👨',
+    parent: 'bdiii',
     img: ''
   },
   {
     id: 'bdiiib',
     name: 'Mukund',
-    title: '🧒',
-    parent: 'bdii',
+    title: '👨',
+    parent: 'bdiii',
     img: ''
   },
   {
@@ -519,20 +527,20 @@ d3.tree().nodeSize([dx*2, dy*1.2])
     id: 'bei',
     name: 'Arun Kumar',
     title: 'Rathna',
-    parent: 'bdi',
+    parent: 'be',
     img: ''
   },
   {
     id: 'beia',
     name: 'Jayanth',
-    title: '🧒',
+    title: '👨',
     parent: 'bei',
     img: ''
   },
   {
     id: 'beib',
     name: 'Roshan',
-    title: '🧒',
+    title: '👨',
     parent: 'bei',
     img: ''
   },
@@ -553,21 +561,21 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'beiib',
     name: 'Surya Narayan',
-    title: '🧒',
+    title: '👨',
     parent: 'beii',
     img: ''
   },
   {
     id: 'beiic',
     name: 'Shankar Narayan',
-    title: '🧒',
+    title: '👨',
     parent: 'beii',
     img: ''
   },
   {
     id: 'beiid',
     name: 'Sathya Narayan',
-    title: '🧒',
+    title: '👨',
     parent: 'beii',
     img: ''
   },
@@ -588,7 +596,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'bfii',
     name: 'Vijay Raghavan',
-    title: '🧒',
+    title: '👨',
     parent: 'bf',
     img: ''
   },
@@ -602,14 +610,14 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'bgi',
     name: 'Sankkara Narayanan',
-    title: '🧒',
+    title: '👨',
     parent: 'bg',
     img: './images/Govindaraju/Sankar.jpg'
   },
   {
     id: 'bgii',
     name: 'Ganesh Krishna',
-    title: '🧒',
+    title: '👨',
     parent: 'bg',
     img: ''
   },
@@ -630,7 +638,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'daia',
     name: 'Adarsh Krishnan',
-    title: '🧒',
+    title: '👨',
     parent: 'dai',
     img: './images/Venugopal/Adarsh.jpg'
   },
@@ -671,7 +679,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'dbia',
     name: 'Dhruvan',
-    title: '🧒',
+    title: '👨',
     parent: 'dbi',
     img: ''
   },
@@ -720,7 +728,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'dcib',
     name: 'Harsha',
-    title: '🧒',
+    title: '👨',
     parent: 'dci',
     img: './images/Venugopal/Harsha.jpg'
   },
@@ -734,7 +742,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'dciib',
     name: 'Teerth Monish',
-    title: '🧒',
+    title: '👨',
     parent: 'dcii',
     img: ''
   },
@@ -762,7 +770,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'ddib',
     name: 'Sarvesh',
-    title: '🧒',
+    title: '👨',
     parent: 'ddi',
     img: ''
   },
@@ -776,7 +784,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'ddiia',
     name: 'Sashvan',
-    title: '🧒',
+    title: '👨',
     parent: 'ddii',
     img: ''
   },
@@ -797,7 +805,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'deii',
     name: 'Vijay Ranjan',
-    title: '🧒',
+    title: '👨',
     parent: 'de',
     img: ''
   },
@@ -818,14 +826,14 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'dfi',
     name: 'Sudharsan',
-    title: '🧒',
+    title: '👨',
     parent: 'df',
     img: './images/Venugopal/Sudharsan.jpg'
   },
   {
     id: 'dfii',
     name: 'Gowthamnarayanan',
-    title: '🧒',
+    title: '👨',
     parent: 'df',
     img: './images/Venugopal/Gowthamnarayanan.jpg'
   },
@@ -834,28 +842,28 @@ d3.tree().nodeSize([dx*2, dy*1.2])
     name: 'Vijayalakshmi',
     title: 'Rajamanickam',
     parent: 'e',
-    img: ''
+    img: './images/Gurusamy/vijaya.jpg'
   },
   {
     id: 'eai',
     name: 'Vijayarani',
-    title: 'Please Update',
+    title: 'Udhay Shankar',
     parent: 'ea',
-    img: ''
+    img: './images/Gurusamy/rani.jpg'
   },
   {
     id: 'eaia',
     name: 'Varshini',
     title: '👧',
     parent: 'eai',
-    img: ''
+    img: './images/Gurusamy/varshini.jpg'
   },
   {
     id: 'eaib',
     name: 'Pranav',
-    title: '🧒',
+    title: '👨',
     parent: 'eai',
-    img: ''
+    img: './images/Gurusamy/pranav.jpg'
   },
   {
     id: 'eaii',
@@ -876,7 +884,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
     name: 'Senthil',
     title: 'Lakshmi Priya',
     parent: 'ea',
-    img: ''
+    img: './images/Gurusamy/senthil.jpg'
   },
   {
     id: 'eaiiia',
@@ -888,9 +896,9 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'eaiiib',
     name: 'Vignesh',
-    title: '🧒',
+    title: '👨',
     parent: 'eaiii',
-    img: ''
+    img: './images/Gurusamy/Vignesh.jpg'
   },
   {
     id: 'eb',
@@ -949,6 +957,13 @@ d3.tree().nodeSize([dx*2, dy*1.2])
     img: ''
   },
   {
+    id: 'ecib',
+    name: 'Nakul Kruthik',
+    title: '',
+    parent: 'eci',
+    img: ''
+  },
+  {
     id: 'ecii',
     name: 'Balakrishna',
     title: 'Saranya',
@@ -958,7 +973,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'eciia',
     name: 'Dhanush',
-    title: '🧒',
+    title: '👨',
     parent: 'ecii',
     img: ''
   },
@@ -1007,7 +1022,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'eei',
     name: 'Anutham Perumal',
-    title: '🧒',
+    title: '👨',
     parent: 'ee',
     img: ''
   },
@@ -1035,7 +1050,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'faii',
     name: 'Dhanvanthir',
-    title: '🧒',
+    title: '👨',
     parent: 'fa',
     img: ''
   },
@@ -1070,7 +1085,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'fci',
     name: 'Shrrinivas',
-    title: '🧒',
+    title: '👨',
     parent: 'fc',
     img: './images/Nataraj/Srinivasan.jpg'
   },
@@ -1098,7 +1113,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'fdia',
     name: 'Narendar',
-    title: '🧒',
+    title: '👨',
     parent: 'fdi',
     img: ''
   },
@@ -1112,7 +1127,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'fei',
     name: 'Sundar Rajan',
-    title: '🧒',
+    title: '👨',
     parent: 'fe',
     img: './images/Nataraj/Sundar.jpg'
   },
@@ -1140,7 +1155,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'gaia',
     name: 'Vishanth',
-    title: '🧒',
+    title: '👨',
     parent: 'gai',
     img: ''
   },
@@ -1161,42 +1176,42 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'gbi',
     name: 'Adithya',
-    title: '🧒',
+    title: '👨',
     parent: 'gb',
     img: ''
   },
   {
     id: 'gbii',
     name: 'Akash',
-    title: '🧒',
+    title: '👨',
     parent: 'gb',
     img: ''
   },
   {
     id: 'ha',
     name: 'Nagarathnam',
-    title: 'Please Update',
+    title: 'Kanchana',
     parent: 'h',
     img: ''
   },
   {
     id: 'hb',
     name: 'Malliga',
-    title: 'Please Update',
+    title: 'Selvaraju',
     parent: 'h',
     img: ''
   },
   {
     id: 'hc',
     name: 'Kandasamy',
-    title: 'Please Update',
+    title: 'Parvathy',
     parent: 'h',
     img: ''
   },
   {
     id: 'hd',
     name: 'Kanchana',
-    title: 'Please Update',
+    title: 'Shanmugam',
     parent: 'h',
     img: ''
   },
@@ -1252,7 +1267,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'ibia',
     name: 'Lakshaditya',
-    title: '🧒',
+    title: '👨',
     parent: 'ibi',
     img: ''
   },
@@ -1308,21 +1323,21 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'jbi',
     name: 'Gurunaveen',
-    title: '🧒',
+    title: '👨',
     parent: 'jb',
     img: ''
   },
   {
     id: 'jc',
     name: 'Nirmaladevi',
-    title: 'Ram Prasad',
+    title: 'Ram Prasath',
     parent: 'j',
-    img: ''
+    img: './images/Ramdass/nimmi.jpg'
   },
   {
     id: 'jci',
-    name: 'Lalit Prasad',
-    title: '🧒',
+    name: 'Lallit Prasath',
+    title: '👨',
     parent: 'jc',
     img: ''
   },
@@ -1336,7 +1351,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'kai',
     name: 'Ananthu',
-    title: '🧒',
+    title: '👨',
     parent: 'ka',
     img: ''
   },
@@ -1357,7 +1372,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'kci',
     name: 'Sadasivam',
-    title: '🧒',
+    title: '👨',
     parent: 'kc',
     img: ''
   },
@@ -1378,7 +1393,7 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   {
     id: 'kdi',
     name: 'Parthasarathi',
-    title: '🧒',
+    title: '👨',
     parent: 'kd',
     img: ''
   }
