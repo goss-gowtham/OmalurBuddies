@@ -12,15 +12,13 @@ md`# Omalur Family Tree - Collapsible
   const root = treeData;
   root.x0 = dy / 2;
   root.y0 = 0;
+  
 
   const radius = (dx * .9) / 2;
-
   const svg = d3
     .create("svg")
-    .attr('width',"100%")
-    .attr('height','100%')
-    .attr("viewBox", [0, 0, svgWidth, dx/2])
-    .style("font", "16px sans-serif")
+    .attr("viewBox", [-margin.left, -margin.top, width, dx])
+    .style("font", "20px sans-serif")
     .style("user-select", "none");
   console.log("This site is developed by Gowthamnarayanan S")
 
@@ -70,12 +68,12 @@ md`# Omalur Family Tree - Collapsible
       if (node.x > right.x) right = node;
     });
 
-    const height = right.x - left.x + margin.top + margin.bottom;
+    const height = right.x - left.x + margin.top + margin.bottom + 60;
 
     const transition = svg
       .transition()
       .duration(duration)
-      .attr("viewBox", [-margin.left*0.7, left.x - margin.top*4, width, height*4])
+      .attr("viewBox", [-margin.left*0.9, left.x - margin.top*4, width, height*1.25])
       .tween(
         "resize",
         window.ResizeObserver ? null : () => () => svg.dispatch("toggle")
@@ -83,7 +81,6 @@ md`# Omalur Family Tree - Collapsible
 
     // Update the nodes…
     const node = gNode.selectAll("g").data(nodes, d => d.id);
-    console.log(node);
     
     // Enter any new nodes at the parent's previous position.
     const nodeEnter = node
@@ -156,7 +153,7 @@ md`# Omalur Family Tree - Collapsible
       .attr("x", labelX)
       .attr("text-anchor", d => (d._children ? "end" : "start"))
       .attr("fill", "#999")
-      .style("font", "12px sans-serif")
+      .style("font", "16px sans-serif")
       .text(d => d.data.title)
       .clone(true)
       .lower()
@@ -165,16 +162,6 @@ md`# Omalur Family Tree - Collapsible
       .attr("stroke", "#eee")
       .append("tspan")
       .attr("dy", "0.3em");
-
-    // Show node's collapsed children count
-    // nodeEnter
-    //   .append("circle")
-    //   .attr("r", 2)
-    //   .attr("cx", dx / 2 + 6)
-    //   .attr("fill", "none")
-    //   .attr("stroke", "#555")
-    //   .attr("stroke-width", 1)
-    //   .attr('opacity', d => (!d.children && d._children ? 100 : 0));
 
     // Transition nodes to their new position.
     const nodeUpdate = node
@@ -226,9 +213,6 @@ md`# Omalur Family Tree - Collapsible
       d.x0 = d.x;
       d.y0 = d.y;
     });
-
-
-
   }
 
   update(root);
@@ -240,7 +224,7 @@ md`# Omalur Family Tree - Collapsible
 d3.linkHorizontal().x(d => d.y).y(d => d.x)
 )});
   main.variable(observer("tree")).define("tree", ["d3","dx","dy"], function(d3,dx,dy){return(
-d3.tree().nodeSize([dx*2, dy*1.2])
+d3.tree().nodeSize([dx*4, dy])
 )});
   main.variable(observer("flatData")).define("flatData", function(){return(
 [
@@ -870,14 +854,14 @@ d3.tree().nodeSize([dx*2, dy*1.2])
     name: 'Sasirekha',
     title: 'Karthikeyan',
     parent: 'ea',
-    img: ''
+    img: './images/Gurusamy/sasi.jpg'
   },
   {
     id: 'eaiia',
     name: 'Divya Dharshini',
     title: '👧',
     parent: 'eaii',
-    img: ''
+    img: './images/Gurusamy/divyadharshini.jpg'
   },
   {
     id: 'eaiii',
@@ -937,10 +921,10 @@ d3.tree().nodeSize([dx*2, dy*1.2])
   },
   {
     id: 'ec',
-    name: 'kalyani',
+    name: 'Kalyani',
     title: 'Rajagopal',
     parent: 'e',
-    img: ''
+    img: './images/Gurusamy/Kalyani.jpg'
   },
   {
     id: 'eci',
@@ -968,14 +952,14 @@ d3.tree().nodeSize([dx*2, dy*1.2])
     name: 'Balakrishna',
     title: 'Saranya',
     parent: 'ec',
-    img: ''
+    img: './images/Gurusamy/balakrishnan.jpg'
   },
   {
     id: 'eciia',
     name: 'Dhanush',
     title: '👨',
     parent: 'ecii',
-    img: ''
+    img: './images/Gurusamy/Dhanush.jpg'
   },
   {
     id: 'ed',
@@ -1420,7 +1404,7 @@ table(flatData)
   main.variable(observer("mutable treeData")).define("mutable treeData", ["Mutable", "initial treeData"], (M, _) => new M(_));
   main.variable(observer("treeData")).define("treeData", ["mutable treeData"], _ => _.generator);
   main.variable(observer("dx")).define("dx", function(){return(
-30
+38
 )});
   main.variable(observer("dy")).define("dy", ["width","treeData","dx"], function(width,treeData,dx){return(
 Math.min(width / (treeData.height + 2), dx * 10)
