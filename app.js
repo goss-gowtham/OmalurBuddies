@@ -931,21 +931,21 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Gajalakshmi',
     title: 'Hemath Kumar',
     parent: 'ec',
-    img: ''
+    img: './images/Gurusamy/Gajalakshmi.jpg'
   },
   {
     id: 'ecia',
     name: 'Rithika',
     title: '👧',
     parent: 'eci',
-    img: ''
+    img: './images/Gurusamy/Rithika.jpg'
   },
   {
     id: 'ecib',
     name: 'Nakul Kruthik',
     title: '',
     parent: 'eci',
-    img: ''
+    img: './images/Gurusamy/Nakul.jpg'
   },
   {
     id: 'ecii',
