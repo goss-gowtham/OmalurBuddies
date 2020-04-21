@@ -1,5 +1,4 @@
 // https://observablehq.com/@forresto/collapsible-tree-with-photos@616
-import define1 from "./81ee2b72e850ad42@794.js";
 
 export default function define(runtime, observer) {
   const main = runtime.module();
@@ -9,6 +8,7 @@ md`# Omalur Family Tree - Collapsible
 )});
   main.variable(observer("chart")).define("chart", ["treeData","dy","dx","d3","margin","svgWidth","tree","width","diagonal"], function(treeData,dy,dx,d3,margin,svgWidth,tree,width,diagonal)
 {
+
   const root = treeData;
   root.x0 = dy / 2;
   root.y0 = 0;
@@ -33,8 +33,8 @@ md`# Omalur Family Tree - Collapsible
     .append("g")
     .attr("fill", "none")
     .attr("stroke", "#0f0")
-    .attr("stroke-opacity", 0.45)
-    .attr("stroke-width", 1);
+    .attr("stroke-opacity", 0.85)
+    .attr("stroke-width", 2);
 
   const gNode = svg
     .append("g")
@@ -73,7 +73,7 @@ md`# Omalur Family Tree - Collapsible
     const transition = svg
       .transition()
       .duration(duration)
-      .attr("viewBox", [-margin.left*0.9, left.x - margin.top*4, width, height*1.25])
+      .attr("viewBox", [-margin.left*0.9, left.x - margin.top*4, width, height*1.05])
       .tween(
         "resize",
         window.ResizeObserver ? null : () => () => svg.dispatch("toggle")
@@ -131,14 +131,14 @@ md`# Omalur Family Tree - Collapsible
       .attr("width", radius * 4)
       .attr("clip-path", "url(#avatar-clip)");
 
-    const labelX = d => (d._children ? -radius * 2.5 : radius * 2.5);
+    const labelX = radius/2;
 
     // Name
     nodeEnter
       .append("text")
-      .attr("dy", "-0em")
+      .attr("dy", "3em")
       .attr("x", labelX)
-      .attr("text-anchor", d => (d._children ? "end" : "start"))
+      .attr("text-anchor","middle")
       .text(d => d.data.name)
       .clone(true)
       .lower()
@@ -149,9 +149,9 @@ md`# Omalur Family Tree - Collapsible
     // Title
     nodeEnter
       .append("text")
-      .attr("dy", "1.3em")
+      .attr("dy", "5em")
       .attr("x", labelX)
-      .attr("text-anchor", d => (d._children ? "end" : "start"))
+      .attr("text-anchor", "middle")
       .attr("fill", "#999")
       .style("font", "16px sans-serif")
       .text(d => d.data.title)
@@ -837,7 +837,7 @@ d3.tree().nodeSize([dx*4, dy])
   },
   {
     id: 'eaia',
-    name: 'Varshini',
+    name: 'Nithya Varshini',
     title: '👧',
     parent: 'eai',
     img: './images/Gurusamy/varshini.jpg'
@@ -1239,21 +1239,21 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Sumathi',
     title: 'Shanmugasundaram',
     parent: 'i',
-    img: ''
+    img: './images/Sekar/Sumathi.jpg'
   },
   {
     id: 'ibi',
-    name: 'Krithika',
+    name: 'Kirthika',
     title: 'Karthik Raguram',
     parent: 'ib',
-    img: ''
+    img: './images/Sekar/Kirthika.jpg'
   },
   {
     id: 'ibia',
     name: 'Lakshaditya',
     title: '👨',
     parent: 'ibi',
-    img: ''
+    img: './images/Sekar/Lakshaditya.jpg'
   },
   {
     id: 'ibii',
@@ -1302,14 +1302,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Suryaprabha',
     title: 'Kumaresan',
     parent: 'j',
-    img: ''
+    img: './images/Ramdass/churi.jpg'
   },
   {
     id: 'jbi',
     name: 'Gurunaveen',
     title: '👨',
     parent: 'jb',
-    img: ''
+    img: './images/Ramdass/gurunaveen.jpg'
   },
   {
     id: 'jc',
@@ -1323,7 +1323,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Lallit Prasath',
     title: '👨',
     parent: 'jc',
-    img: ''
+    img: './images/Ramdass/lallith.jpg'
   },
   {
     id: 'ka',
@@ -1403,9 +1403,7 @@ table(flatData)
 );
   main.variable(observer("mutable treeData")).define("mutable treeData", ["Mutable", "initial treeData"], (M, _) => new M(_));
   main.variable(observer("treeData")).define("treeData", ["mutable treeData"], _ => _.generator);
-  main.variable(observer("dx")).define("dx", function(){return(
-38
-)});
+  main.variable(observer("dx")).define("dx", function(){return(42)});
   main.variable(observer("dy")).define("dy", ["width","treeData","dx"], function(width,treeData,dx){return(
 Math.min(width / (treeData.height + 2), dx * 10)
 )});
@@ -1421,7 +1419,5 @@ md`# Libs`
   main.variable(observer("d3")).define("d3", ["require"], function(require){return(
 require("d3@5")
 )});
-  const child1 = runtime.module(define1);
-  main.import("table", child1);
   return main;
 }
