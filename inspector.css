@@ -132,7 +132,7 @@ outline: 1px solid slategrey;
 
 h1,h2,h3 {
   font-family: "Righteous";
-  font-size: 4em;
+  font-size: 4.3em;
 }
 
 h5 {
@@ -152,7 +152,7 @@ h5 {
   border: none;
   outline: none;
   opacity: 0.7;
-  font-weight: 100;
+  font-weight: 200;
   border-radius: 10rem;
   box-shadow: 0 1rem 2rem rgba(black, .1);
   padding: 2rem;
@@ -164,4 +164,19 @@ h5 {
 .searchbar::placeholder {
   opacity: .7;
   color: #e0f7d2;
+}
+
+.card {
+  background: #ffffff60 !important;
+  font-size: 24px;
+}
+
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+  padding: 0;
+}
+
+.carousel-caption {
+  background-color: #00000061 !important;
 }

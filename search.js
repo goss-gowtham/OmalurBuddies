@@ -21,50 +21,49 @@ $.getJSON( "data.json", function( json ) {
     
             jQuery.each(value, function (key, value) {
                 record += (' ' + value);
-            });
+            });           
     
-            $(element).append($(tag).append($(tag2).append(record)));
+            $(element).append($(tag).append($(tag2)));
         }
     
         function compare_search_term_to_data_set(input_val, key, value) {
-            // Compare search term to result set key name and value
-            console.log(input_val, 'Un', key,' kjk', value);
-            
+            // Compare search term to result set key name and value            
             var match = false;
-    
-            match = (key.toLowerCase().indexOf(input_val.toLowerCase()) >= 0) ? true : false;
     
             jQuery.each(value, function (key, value) {
                 if (value.toLowerCase().indexOf(input_val.toLowerCase()) >= 0) {
                     match = true;
                 }
             });
+            
     
             if (match) {
-                append_to_results('.results', '<tr class="match">', '<td>', key, value);
+                // if (value.img == '') {
+                //     value.img = './images/Venugopal/Gowthamnarayanan.jpg'
+                // }
+                
+                $('.undraw').hide();
+                append_to_results('.results', '<div class="match col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 px-auto">', '<div class="card shadow-lg px-2 rounded-lg my-2 border-0"><div class="card-horizontal"><div class="p-3"><img src="'+value.img+'" height="150px" width="150px" class="rounded-lg"></div><div class="card-body"><p class="mb-1">'+value.name+'</p><p class="p-0 text-muted">'+value.title+'</p><p class="p-0 m-0 text-muted"><img class="img-fluid" src="./images/home/location.png" height="30" width="30">'+value.location+'</p></div></div></div></div>', key, value);
             }
         }
     
         function search_autocomplete() {
-            // Search the list of vehicles and autocomplete the search term
+            // Search the list of data and autocomplete the search term
     
             var key_event = event.which;
             var input_val = $(this).val();
     
-            console.log(key_event);
-    
             // If key pressed is not alphanumeric or backspace, early exit
-            if (!check_key_event(key_event)) {
+            if (!check_key_event(key_event) || input_val.length <= 3 || input_val == 'image') {
                 return false;
             }
-    
             // Clear list of results
             $('.match').remove();
     
             jQuery.each(json, function (key, value) {                
                 // Compare search term to result set name
-                if (json.name || json.location) {
-                    var match = compare_search_term_to_data_set(json.name, key, value);
+                if (input_val) {
+                    var match = compare_search_term_to_data_set(input_val, key, value);
                 }
             });
         }

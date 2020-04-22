@@ -68,7 +68,7 @@ md`# Omalur Family Tree - Collapsible
       if (node.x > right.x) right = node;
     });
 
-    const height = right.x - left.x + margin.top + margin.bottom + 80;
+    const height = right.x - left.x + margin.top + margin.bottom + 100;
 
     const transition = svg
       .transition()
@@ -589,7 +589,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Ranganathan',
     title: 'Sudha',
     parent: 'b',
-    img: ''
+    img: './images/Govindaraju/Ranganathan.jpg'
   },
   {
     id: 'bgi',
@@ -761,7 +761,7 @@ d3.tree().nodeSize([dx*4, dy])
   {
     id: 'ddii',
     name: 'Santhosh',
-    title: 'Soundarya',
+    title: 'Sangeetha',
     parent: 'dd',
     img: ''
   },
