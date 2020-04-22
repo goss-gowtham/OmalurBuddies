@@ -144,3 +144,24 @@ h5 {
   height:550px;
   object-fit: contain;
 }
+
+.search_term {
+  font-size: 2rem;
+  width: 90vw;
+  height: 3rem;
+  border: none;
+  outline: none;
+  opacity: 0.7;
+  font-weight: 100;
+  border-radius: 10rem;
+  box-shadow: 0 1rem 2rem rgba(black, .1);
+  padding: 2rem;
+  position: relative;
+  transition: all .2s;
+  transition-delay: .1s;
+}
+
+.searchbar::placeholder {
+  opacity: .7;
+  color: #e0f7d2;
+}

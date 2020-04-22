@@ -1,9 +1,9 @@
 <!DOCTYPE html>
+<head>
 <meta charset="utf-8">
 <title>Omalur Perumal Family Tree</title>
 <link rel="stylesheet" type="text/css" href="./inspector.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131832126-4"></script>
 <script>
@@ -13,6 +13,11 @@
 
   gtag('config', 'UA-131832126-4');
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="data.json"></script>
+<script type="text/javascript" src="search.js"></script>
+
+</head>
 <body>
 <nav class="navbar navbar-primary bg-primary d-flex justify-content-center shadow text-size">
   <span class="navbar-text">
@@ -63,7 +68,14 @@
   </a>
 </div>
 </div>
-
+<hr class="shadow m-5">
+<div class="search-form m-3 d-flex justify-content-center">
+    <form action="#" method="#">
+        <input type="text" class="search_term" placeholder="Search Name or Location" autofocus autocomplete="off">
+        <table class="results" border="0"></table>
+        <p class="text-center mt-3 text-muted"> Search coming soon </p>
+    </form>
+</div>
 <div class="card-footer text-muted text-center mt-5 p-3" style="font-size:20px">
   Made with ❤️ by <a href="https://www.google.com/search?q=goss+gowtham">Goss Gowtham</a>
 </div>

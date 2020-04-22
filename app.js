@@ -68,7 +68,7 @@ md`# Omalur Family Tree - Collapsible
       if (node.x > right.x) right = node;
     });
 
-    const height = right.x - left.x + margin.top + margin.bottom + 60;
+    const height = right.x - left.x + margin.top + margin.bottom + 80;
 
     const transition = svg
       .transition()
@@ -310,7 +310,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Ramachandran',
     title: 'Malliga',
     parent: 'b',
-    img: ''
+    img: './images/Govindaraju/Ramji.jpg'
   },
   {
     id: 'bai',
@@ -338,14 +338,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Chennama',
     title: 'Rajkumar',
     parent: 'ba',
-    img: ''
+    img: './images/Govindaraju/Chenni.jpg'
   },
   {
     id: 'baiia',
     name: 'Madhav',
     title: '👨',
     parent: 'baii',
-    img: ''
+    img: './images/Govindaraju/Madhav.jpg'
   },
   {
     id: 'bb',
@@ -1001,14 +1001,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Ganesh Perumal',
     title: 'Geetha',
     parent: 'e',
-    img: ''
+    img: './images/Gurusamy/Ganesh.jpg'
   },
   {
     id: 'eei',
     name: 'Anutham Perumal',
     title: '👨',
     parent: 'ee',
-    img: ''
+    img: './images/Gurusamy/Anuttam.jpg'
   },
   {
     id: 'eeii',
@@ -1281,21 +1281,21 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Muralidharan',
     title: 'Ponmalar',
     parent: 'j',
-    img: ''
+    img: './images/Ramdass/Murali.jpg'
   },
   {
     id: 'jai',
     name: 'Janani',
     title: '👧',
     parent: 'ja',
-    img: ''
+    img: './images/Ramdass/Janani.jpg'
   },
   {
     id: 'jaii',
     name: 'Ishani',
     title: '👧',
     parent: 'ja',
-    img: ''
+    img: './images/Ramdass/Ishani.jpg'
   },
   {
     id: 'jb',
