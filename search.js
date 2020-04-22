@@ -43,7 +43,7 @@ $.getJSON( "data.json", function( json ) {
                 // }
                 
                 $('.undraw').hide();
-                append_to_results('.results', '<div class="match col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 px-auto">', '<div class="card shadow-lg px-2 rounded-lg my-2 border-0"><div class="card-horizontal"><div class="p-3"><img src="'+value.img+'" height="150px" width="150px" class="rounded-lg"></div><div class="card-body"><p class="mb-1">'+value.name+'</p><p class="p-0 text-muted">'+value.title+'</p><p class="p-0 m-0 text-muted"><img class="img-fluid" src="./images/home/location.png" height="30" width="30">'+value.location+'</p></div></div></div></div>', key, value);
+                append_to_results('.results', '<div class="match col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 px-auto">', '<div class="card shadow-lg px-2 rounded-lg my-2 border-0"><div class="card-horizontal"><div class="p-3"><img src="'+value.img+'" height="150px" width="150px" class="rounded-lg"></div><div class="card-body"><p class="mb-1">'+value.name+'</p><p class="p-0 text-muted" style="font-size:18px">'+value.title+'</p><p class="p-0 m-0 text-muted" style="font-size:18px"><img class="img-fluid" src="./images/home/location.png" height="30" width="30">'+value.location+'</p></div></div></div></div>', key, value);
             }
         }
     
