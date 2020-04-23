@@ -317,21 +317,21 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Gokulraj',
     title: 'Shyama',
     parent: 'ba',
-    img: ''
+    img: './images/Govindaraju/Gokul.jpg'
   },
   {
     id: 'baia',
     name: 'Narotham',
     title: '👨',
     parent: 'bai',
-    img: ''
+    img: './images/Govindaraju/Narotham.jpg'
   },
   {
     id: 'baib',
     name: 'Gopal',
     title: '👨',
     parent: 'bai',
-    img: ''
+    img: './images/Govindaraju/Gopal.jpg'
   },
   {
     id: 'baii',
@@ -538,31 +538,31 @@ d3.tree().nodeSize([dx*4, dy])
   },
   {
     id: 'beiia',
-    name: 'Soundarya',
+    name: 'Soundaryalakshmi',
     title: '👧',
     parent: 'beii',
-    img: ''
+    img: './images/Govindaraju/Soundaryalakshmi.jpg'
   },
   {
     id: 'beiib',
-    name: 'Surya Narayan',
+    name: 'Suryanarayanan',
     title: '👨',
     parent: 'beii',
-    img: ''
+    img: './images/Govindaraju/Suryanarayanan.jpg'
   },
   {
     id: 'beiic',
-    name: 'Shankar Narayan',
+    name: 'Sankaranarayanan',
     title: '👨',
     parent: 'beii',
-    img: ''
+    img: './images/Govindaraju/Sankaranarayanan.jpg'
   },
   {
     id: 'beiid',
     name: 'Sathya Narayan',
     title: '👨',
     parent: 'beii',
-    img: ''
+    img: './images/Govindaraju/Sathyanarayanan.jpg'
   },
   {
     id: 'bf',
@@ -597,14 +597,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Sankkara Narayanan',
     title: '👨',
     parent: 'bg',
-    img: './images/Govindaraju/Sankar.jpg'
+    img: './images/Govindaraju/Sankar.png'
   },
   {
     id: 'bgii',
     name: 'Ganesh Krishna',
     title: '👨',
     parent: 'bg',
-    img: ''
+    img: './images/Govindaraju/Ganesh.jpg'
   },
   {
     id: 'da',
@@ -632,14 +632,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Sri Ram',
     title: 'Sasi Madhumitha',
     parent: 'da',
-    img: ''
+    img: './images/Venugopal/Ram.jpg'
   },
   {
     id: 'daiia',
     name: 'Nakshatra',
     title: '👧',
     parent: 'daii',
-    img: ''
+    img: './images/Venugopal/Nakshathra.jpg'
   },
   {
     id: 'daiii',
@@ -778,28 +778,28 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Venkatraju',
     title: 'Geethalakshmi',
     parent: 'd',
-    img: ''
+    img: './images/Venugopal/Venkatraju.jpg'
   },
   {
     id: 'dei',
     name: 'Vishnupriya',
     title: 'Vinod',
     parent: 'de',
-    img: ''
+    img: './images/Venugopal/priya.jpg'
   },
   {
     id: 'deii',
     name: 'Vijay Ranjan',
     title: '👨',
     parent: 'de',
-    img: ''
+    img: './images/Venugopal/Vijayranjan.jpg'
   },
   {
     id: 'deia',
     name: 'Kaviya',
     title: '👧',
     parent: 'dei',
-    img: ''
+    img: './images/Venugopal/Kaviya.jpg'
   },
   {
     id: 'df',
@@ -876,7 +876,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Vishalakshi',
     title: '👧',
     parent: 'eaiii',
-    img: ''
+    img: './images/Gurusamy/Vishalakshi.jpg'
   },
   {
     id: 'eaiiib',
@@ -943,7 +943,7 @@ d3.tree().nodeSize([dx*4, dy])
   },
   {
     id: 'ecib',
-    name: 'Nakul Kruthik',
+    name: 'Naghul Kiruthik',
     title: '',
     parent: 'eci',
     img: './images/Gurusamy/Nakul.jpg'
@@ -957,7 +957,7 @@ d3.tree().nodeSize([dx*4, dy])
   },
   {
     id: 'eciia',
-    name: 'Dhanush',
+    name: 'Sai Ram Tanvesh',
     title: '👨',
     parent: 'ecii',
     img: './images/Gurusamy/Dhanush.jpg'
@@ -974,7 +974,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Rupasundari',
     title: 'Prasanna Srinivasan',
     parent: 'ed',
-    img: ''
+    img: './images/Gurusamy/Rupa.jpg'
   },
   {
     id: 'edia',
@@ -1212,14 +1212,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Amsakala',
     title: 'Shanmugasundaram',
     parent: 'i',
-    img: ''
+    img: './images/Sekar/Amsa.jpg'
   },
   {
     id: 'iai',
     name: 'Nirmalraj(Narendar)',
     title: 'Sangeetha',
     parent: 'ia',
-    img: ''
+    img: './images/Sekar/Naren.jpg'
   },
   {
     id: 'iaii',
@@ -1268,14 +1268,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Ramesh Babu',
     title: 'Anuradha',
     parent: 'i',
-    img: ''
+    img: './images/Sekar/Ramesh.jpg'
   },
   {
     id: 'ici',
     name: 'Rashmitha',
     title: '👧',
     parent: 'ic',
-    img: ''
+    img: './images/Sekar/Rashmitha.jpg'
   },
   {
     id: 'ja',
@@ -1349,9 +1349,9 @@ d3.tree().nodeSize([dx*4, dy])
   },
   {
     id: 'kbi',
-    name: 'Naveen',
+    name: 'Naveen Shankar',
     title: '👨',
-    parent: 'k',
+    parent: 'kb',
     img: ''
   },
   {

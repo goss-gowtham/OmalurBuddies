@@ -100,24 +100,24 @@
       "name":"Gokulraj",
       "title":"Shyama",
       "parent":"ba",
-      "img":"",
-      "location": "Please update"
+      "img":"./images/Govindaraju/Gokul.jpg",
+      "location": "Bengaluru"
    },
    {
       "id":"baia",
       "name":"Narotham",
       "title":"👨",
       "parent":"bai",
-      "img":"",
-      "location": "Please update"
+      "img":"./images/Govindaraju/Narotham.jpg",
+      "location": "Bengaluru"
    },
    {
       "id":"baib",
       "name":"Gopal",
       "title":"👨",
       "parent":"bai",
-      "img":"",
-      "location": "Please update"
+      "img":"./images/Govindaraju/Gopal.jpg",
+      "location": "Bengaluru"
    },
    {
       "id":"baii",
@@ -353,34 +353,34 @@
    },
    {
       "id":"beiia",
-      "name":"Soundarya",
+      "name":"Soundaryalakshmi",
       "title":"👧",
       "parent":"beii",
-      "img":"",
+      "img":"./images/Govindaraju/Soundaryalakshmi.jpg",
       "location": "Chennai"
    },
    {
       "id":"beiib",
-      "name":"Surya Narayan",
+      "name":"Suryanarayanan",
       "title":"👨",
       "parent":"beii",
-      "img":"",
+      "img":"./images/Govindaraju/Suryanarayanan.jpg",
       "location": "Chennai"
    },
    {
       "id":"beiic",
-      "name":"Shankar Narayan",
+      "name":"Sankaranarayanan",
       "title":"👨",
       "parent":"beii",
-      "img":"",
+      "img":"./images/Govindaraju/Sankaranarayanan.jpg",
       "location": "Chennai"
    },
    {
       "id":"beiid",
-      "name":"Sathya Narayan",
+      "name":"Sathyanarayanan",
       "title":"👨",
       "parent":"beii",
-      "img":"",
+      "img":"./images/Govindaraju/Sathyanarayanan.jpg",
       "location": "Chennai"
    },
    {
@@ -420,7 +420,7 @@
       "name":"Sankkara Narayanan",
       "title":"👨",
       "parent":"bg",
-      "img":"./images/Govindaraju/Sankar.jpg",
+      "img":"./images/Govindaraju/Sankar.png",
       "location": "Bengaluru"
    },
    {
@@ -428,7 +428,7 @@
       "name":"Ganesh Krishna",
       "title":"👨",
       "parent":"bg",
-      "img":"",
+      "img":"./images/Govindaraju/Ganesh.jpg",
       "location": "Salem"
    },
    {
@@ -628,7 +628,7 @@
       "name":"Venkatraju",
       "title":"Geethalakshmi",
       "parent":"d",
-      "img":"",
+      "img":"./images/Venugopal/Venkatraju.jpg",
       "location": "Salem"
    },
    {
@@ -636,7 +636,7 @@
       "name":"Vishnupriya",
       "title":"Vinod",
       "parent":"de",
-      "img":"",
+      "img":"./images/Venugopal/priya.jpg",
       "location": "Coimbatore"
    },
    {
@@ -644,7 +644,7 @@
       "name":"Vijay Ranjan",
       "title":"👨",
       "parent":"de",
-      "img":"",
+      "img":"./images/Venugopal/Vijayranjan.jpg",
       "location": "Salem"
    },
    {
@@ -652,7 +652,7 @@
       "name":"Kaviya",
       "title":"👧",
       "parent":"dei",
-      "img":"",
+      "img":"./images/Venugopal/Kaviya.jpg",
       "location": "Coimbatore"
    },
    {
@@ -740,7 +740,7 @@
       "name":"Vishalakshi",
       "title":"👧",
       "parent":"eaiii",
-      "img":"",
+      "img":"./images/Gurusamy/Vishalakshi.jpg",
       "location": "America"
    },
    {
@@ -801,7 +801,7 @@
    },
    {
       "id":"eci",
-      "name":"Gajalakshmi",
+      "name":"Priya",
       "title":"Hemath Kumar",
       "parent":"ec",
       "img":"./images/Gurusamy/Gajalakshmi.jpg",
@@ -817,7 +817,7 @@
    },
    {
       "id":"ecib",
-      "name":"Nakul Kruthik",
+      "name":"Naghul Kiruthik",
       "title":"",
       "parent":"eci",
       "img":"./images/Gurusamy/Nakul.jpg",
@@ -833,7 +833,7 @@
    },
    {
       "id":"eciia",
-      "name":"Dhanush",
+      "name":"Sai Ram Tanvesh",
       "title":"👨",
       "parent":"ecii",
       "img":"./images/Gurusamy/Dhanush.jpg",
@@ -852,7 +852,7 @@
       "name":"Rupasundari",
       "title":"Prasanna Srinivasan",
       "parent":"ed",
-      "img":"",
+      "img":"./images/Gurusamy/Rupa.jpg",
       "location": "Bengaluru"
    },
    {
@@ -1124,7 +1124,7 @@
       "name":"Amsakala",
       "title":"Shanmugasundaram",
       "parent":"i",
-      "img":"",
+      "img":"./images/Sekar/Amsa.jpg",
       "location": "Bengaluru"
    },
    {
@@ -1132,7 +1132,7 @@
       "name":"Nirmalraj(Narendar)",
       "title":"Sangeetha",
       "parent":"ia",
-      "img":"",
+      "img":"./images/Sekar/Naren.jpg",
       "location": "Hyderabad"
    },
    {
@@ -1188,7 +1188,7 @@
       "name":"Ramesh Babu",
       "title":"Anuradha",
       "parent":"i",
-      "img":"",
+      "img":"./images/Sekar/Ramesh.jpg",
       "location": "Omalur"
    },
    {
@@ -1196,7 +1196,7 @@
       "name":"Rashmitha",
       "title":"👧",
       "parent":"ic",
-      "img":"",
+      "img":"./images/Sekar/Rashmitha.jpg",
       "location": "Omalur"
    },
    {
@@ -1281,7 +1281,7 @@
    },
    {
      "id": "kbi",
-     "name": "Naveen",
+     "name": "Naveen Shankar",
      "title": "👨",
      "parent": "kb",
      "img": ""
