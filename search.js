@@ -54,13 +54,18 @@ $.getJSON( "data.json", function( json ) {
             var input_val = $(this).val();
     
             // If key pressed is not alphanumeric or backspace, early exit
-            if (!check_key_event(key_event) || input_val.length <= 3 || input_val == 'image') {
+            if (!check_key_event(key_event) || input_val.length <= 2 || input_val == 'image') {
                 return false;
             }
             // Clear list of results
             $('.match').remove();
     
-            jQuery.each(json, function (key, value) {                
+            jQuery.each(json, function (key, value) { 
+                if (input_val == 'Bangalore') {
+                    input_val = 'Bengaluru';
+                } else if (input_val == 'USA') {
+                    input_val = 'America';
+                }
                 // Compare search term to result set name
                 if (input_val) {
                     var match = compare_search_term_to_data_set(input_val, key, value);

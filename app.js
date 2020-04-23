@@ -233,14 +233,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Perumal',
     title: 'Paarvathi',
     parent: undefined,
-    img: ''
+    img: './images/home/Perumal.jpg'
   },
   {
     id: 'b',
     name: 'Govindaraj',
     title: 'Saraswathi',
     parent: 'a',
-    img: ''
+    img: './images/Govindaraju/Govindaraju.jpg'
   },
   {
     id: 'c',
@@ -275,7 +275,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Krishnaraj',
     title: 'Sivagami',
     parent: 'a',
-    img: ''
+    img: './images/Krishnaraj/Krishnaraj.jpg'
   },
   {
     id: 'h',
@@ -289,7 +289,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Chandrasekaran',
     title: 'Santha Kumari',
     parent: 'a',
-    img: ''
+    img: './images/Sekar/Sekar.png'
   },
   {
     id: 'j',
@@ -387,8 +387,9 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Selvaraj',
     title: 'Santhi',
     parent: 'b',
-    img: ''
-  },{
+    img: './images/Govindaraju/Selvaraj.jpg'
+  },
+  {
     id: 'bci',
     name: 'Uma Parvathi',
     title: '',
@@ -400,35 +401,35 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Eshwari',
     title: 'Sivaram',
     parent: 'bc',
-    img: ''
+    img: './images/Govindaraju/Eshwari.jpg'
   },
   {
     id: 'bciia',
     name: 'Lakshana',
     title: '👨',
     parent: 'bcii',
-    img: ''
+    img: './images/Govindaraju/Lakshana.jpg'
   },
   {
     id: 'bciib',
     name: 'Sanjeev',
     title: '👨',
     parent: 'bcii',
-    img: ''
+    img: './images/Govindaraju/Sanjeev.jpg'
   },
   {
     id: 'bciii',
     name: 'Aishwarya',
     title: 'Harsha',
     parent: 'bc',
-    img: ''
+    img: './images/Govindaraju/Aishwarya.jpg'
   },
   {
     id: 'bciiia',
     name: 'Audvik',
     title: '👨',
     parent: 'bciii',
-    img: ''
+    img: './images/Govindaraju/Aishwarya.jpg'
   },
   {
     id: 'bd',
@@ -505,28 +506,28 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Kamala',
     title: 'Soundarajan',
     parent: 'b',
-    img: ''
+    img: './images/Govindaraju/Kamala.jpg'
   },
   {
     id: 'bei',
     name: 'Arun Kumar',
     title: 'Rathna',
     parent: 'be',
-    img: ''
+    img: './images/Govindaraju/Arun.jpg'
   },
   {
     id: 'beia',
-    name: 'Jayanth',
+    name: 'Jeyanth',
     title: '👨',
     parent: 'bei',
-    img: ''
+    img: './images/Govindaraju/Jayanth.jpg'
   },
   {
     id: 'beib',
     name: 'Roshan',
     title: '👨',
     parent: 'bei',
-    img: ''
+    img: './images/Govindaraju/Roshan.jpg'
   },
   {
     id: 'beii',
@@ -568,21 +569,21 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Srinivas Perumal',
     title: 'Geetha',
     parent: 'b',
-    img: ''
+    img: './images/Govindaraju/Srinivasan.jpg'
   },
   {
     id: 'bfi',
     name: 'Sowmya',
     title: 'Krishna Karthik',
     parent: 'bf',
-    img: ''
+    img: './images/Govindaraju/Sowmya.jpg'
   },
   {
     id: 'bfii',
     name: 'Vijay Raghavan',
     title: '👨',
     parent: 'bf',
-    img: ''
+    img: './images/Govindaraju/VijayRaghavan.jpg'
   },
   {
     id: 'bg',
@@ -658,14 +659,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Dhanalakshmi',
     title: 'Raja Ramesh',
     parent: 'db',
-    img: ''
+    img: './images/Venugopal/Dhanu.jpg'
   },
   {
     id: 'dbia',
     name: 'Dhruvan',
     title: '👨',
     parent: 'dbi',
-    img: ''
+    img: './images/Venugopal/Dhruva.jpg'
   },
   {
     id: 'dbii',
@@ -749,28 +750,28 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Shruthi',
     title: '👧',
     parent: 'ddi',
-    img: ''
+    img: './images/Venugopal/Shruthi.jpg'
   },
   {
     id: 'ddib',
     name: 'Sarvesh',
     title: '👨',
     parent: 'ddi',
-    img: ''
+    img: './images/Venugopal/Sarvesh.jpg'
   },
   {
     id: 'ddii',
     name: 'Santhosh',
     title: 'Sangeetha',
     parent: 'dd',
-    img: ''
+    img: './images/Venugopal/Santhosh.jpg'
   },
   {
     id: 'ddiia',
     name: 'Sashvan',
     title: '👨',
     parent: 'ddii',
-    img: ''
+    img: './images/Venugopal/Sasvan.jpg'
   },
   {
     id: 'de',
@@ -980,21 +981,21 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Tanisha',
     title: '👧',
     parent: 'edi',
-    img: ''
+    img: './images/Gurusamy/Tanisha.jpg'
   },
   {
     id: 'edib',
     name: 'Yazhini',
     title: '👧',
     parent: 'edi',
-    img: ''
+    img: './images/Gurusamy/Yazhini.jpg'
   },
   {
     id: 'edii',
     name: 'Karthikeyan',
     title: 'Jayapreethi',
     parent: 'ed',
-    img: ''
+    img: './images/Gurusamy/Karthikeyan.jpg'
   },
   {
     id: 'ee',
@@ -1026,17 +1027,17 @@ d3.tree().nodeSize([dx*4, dy])
   },
   {
     id: 'fai',
-    name: 'Bharath (Perumal)',
+    name: 'Perumal',
     title: 'Peroli',
     parent: 'fa',
-    img: ''
+    img: './images/Nataraj/Perumal.jpg'
   },
   {
     id: 'faii',
     name: 'Dhanvanthir',
     title: '👨',
     parent: 'fa',
-    img: ''
+    img: './images/Nataraj/Dhan.jpg'
   },
   {
     id: 'fb',
@@ -1057,7 +1058,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Krithika',
     title: '👧',
     parent: 'fb',
-    img: ''
+    img: './images/Nataraj/Kirthika.jpg'
   },
   {
     id: 'fc',
@@ -1120,7 +1121,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Gayathri',
     title: '👧',
     parent: 'fe',
-    img: ''
+    img: './images/Nataraj/Gayathri.jpg'
   },
   {
     id: 'ga',
@@ -1155,21 +1156,21 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Ananthapadmanaban',
     title: 'Manjula',
     parent: 'g',
-    img: ''
+    img: './images/Krishnaraj/Anantha.jpg'
   },
   {
     id: 'gbi',
     name: 'Adithya',
     title: '👨',
     parent: 'gb',
-    img: ''
+    img: './images/Krishnaraj/Aditya.jpg'
   },
   {
     id: 'gbii',
     name: 'Akash',
     title: '👨',
     parent: 'gb',
-    img: ''
+    img: './images/Krishnaraj/Akash.jpg'
   },
   {
     id: 'ha',
@@ -1343,6 +1344,13 @@ d3.tree().nodeSize([dx*4, dy])
     id: 'kb',
     name: 'Mahadevan',
     title: 'Viji',
+    parent: 'k',
+    img: ''
+  },
+  {
+    id: 'kbi',
+    name: 'Naveen',
+    title: '👨',
     parent: 'k',
     img: ''
   },
