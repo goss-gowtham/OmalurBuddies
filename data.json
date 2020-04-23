@@ -460,7 +460,7 @@
       "name":"Sri Ram",
       "title":"Sasi Madhumitha",
       "parent":"da",
-      "img":"",
+      "img":"./images/Venugopal/Ram.jpg",
       "location": "Salem"
    },
    {
@@ -1283,7 +1283,7 @@
      "id": "kbi",
      "name": "Naveen",
      "title": "👨",
-     "parent": "k",
+     "parent": "kb",
      "img": ""
    },
    {

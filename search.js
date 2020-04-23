@@ -29,6 +29,7 @@ $.getJSON( "data.json", function( json ) {
         function compare_search_term_to_data_set(input_val, key, value) {
             // Compare search term to result set key name and value            
             var match = false;
+            var family = '';
     
             jQuery.each(value, function (key, value) {
                 if (value.toLowerCase().indexOf(input_val.toLowerCase()) >= 0) {
@@ -38,12 +39,30 @@ $.getJSON( "data.json", function( json ) {
             
     
             if (match) {
-                // if (value.img == '') {
-                //     value.img = './images/Venugopal/Gowthamnarayanan.jpg'
-                // }
+                if(value.parent.startsWith('a')) {
+                    family = "Perumal's family"; 
+                } else if (value.parent.startsWith('b')) {
+                    family = "Govindaraju's family";
+                } else if (value.parent.startsWith('d')) {
+                    family = "Venugopal's family";
+                } else if (value.parent.startsWith('e')) {
+                    family = "Gurusamy's family";
+                } else if (value.parent.startsWith('f')) {
+                    family = "Natarajan's family";
+                } else if (value.parent.startsWith('g')) {
+                    family = "Krishnaraj's family";
+                } else if (value.parent.startsWith('h')) {
+                    family = "Saraswathi's family";
+                } else if (value.parent.startsWith('i')) {
+                    family = "Chandrasekaran's family";
+                } else if (value.parent.startsWith('j')) {
+                    family = "Ramdass's family";
+                } else if (value.parent.startsWith('k')) {
+                    family = "Seethalakshmi's family";
+                } 
                 
                 $('.undraw').hide();
-                append_to_results('.results', '<div class="match col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 px-auto">', '<div class="card shadow-lg px-2 rounded-lg my-2 border-0"><div class="card-horizontal"><div class="p-3"><img src="'+value.img+'" height="150px" width="150px" class="rounded-lg"></div><div class="card-body"><p class="mb-1">'+value.name+'</p><p class="p-0 text-muted" style="font-size:18px">'+value.title+'</p><p class="p-0 m-0 text-muted" style="font-size:18px"><img class="img-fluid" src="./images/home/location.png" height="30" width="30">'+value.location+'</p></div></div></div></div>', key, value);
+                append_to_results('.results', '<div class="match col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 px-auto">', '<div class="card shadow-lg px-2 rounded-lg my-2 border-0" style="overflow: auto"><div class="card-horizontal"><div class="p-3"><img src="'+value.img+'" height="150px" width="150px" class="rounded-lg"></div><div class="card-body"><p class="mb-1">'+value.name+'</p><p class="p-0 text-muted" style="font-size:18px">'+value.title+'</p><p class="p-0 m-0 text-muted" style="font-size:18px"><img class="img-fluid" src="./images/home/location.png" height="30" width="30">'+value.location+'</p><span class="badge badge-success" style="font-size: 12px; opacity:0.7">'+family+'</span></div></div></div></div>', key, value);
             }
         }
     
@@ -61,10 +80,12 @@ $.getJSON( "data.json", function( json ) {
             $('.match').remove();
     
             jQuery.each(json, function (key, value) { 
-                if (input_val == 'Bangalore') {
+                if (input_val.toLowerCase() == 'bangalore' || input_val.toLowerCase() == 'karnataka' || input_val.toLowerCase() == 'bang') {
                     input_val = 'Bengaluru';
-                } else if (input_val == 'USA') {
+                } else if (input_val.toLowerCase() == 'usa') {
                     input_val = 'America';
+                } else if (input_val.toLowerCase() == 'kovai') {
+                    input_val = 'Coimbatore';
                 }
                 // Compare search term to result set name
                 if (input_val) {

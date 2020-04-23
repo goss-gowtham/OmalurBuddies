@@ -1065,7 +1065,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Vasudevan',
     title: 'Sumithra',
     parent: 'f',
-    img: ''
+    img: './images/Nataraj/Vasudevan.jpg'
   },
   {
     id: 'fci',
