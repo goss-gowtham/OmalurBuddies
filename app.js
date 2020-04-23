@@ -673,14 +673,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Padmasini',
     title: 'Vasudevan',
     parent: 'db',
-    img: ''
+    img: './images/Venugopal/Padhu.jpg'
   },
   {
     id: 'dbiia',
     name: 'Jagshana',
     title: '👧',
     parent: 'dbii',
-    img: ''
+    img: './images/Venugopal/Jagshana.jpg'
   },
   {
     id: 'dc',
@@ -897,28 +897,28 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Karthikeyan',
     title: 'Meghala',
     parent: 'eb',
-    img: ''
+    img: './images/Gurusamy/Karthi.jpg'
   },
   {
     id: 'ebia',
     name: 'Neharika',
     title: '👧',
     parent: 'ebi',
-    img: ''
+    img: './images/Gurusamy/Neharika.jpg'
   },
   {
     id: 'ebii',
     name: 'Vivekananthan',
     title: 'Bhagyalakshmi',
     parent: 'eb',
-    img: ''
+    img: './images/Gurusamy/Vivek.jpg'
   },
   {
     id: 'ebiia',
     name: 'Lithisha',
     title: '👧',
     parent: 'ebii',
-    img: ''
+    img: './images/Gurusamy/Lithisha.jpg'
   },
   {
     id: 'ec',

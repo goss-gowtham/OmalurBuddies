@@ -468,7 +468,7 @@
       "name":"Nakshatra",
       "title":"👧",
       "parent":"daii",
-      "img":"",
+      "img":"./images/Venugopal/Nakshathra.jpg",
       "location": "Salem"
    },
    {
@@ -508,7 +508,7 @@
       "name":"Padmasini",
       "title":"Vasudevan",
       "parent":"db",
-      "img":"",
+      "img":"./images/Venugopal/Padhu.jpg",
       "location": "Chennai"
    },
    {
@@ -516,7 +516,7 @@
       "name":"Jagshana",
       "title":"👧",
       "parent":"dbii",
-      "img":"",
+      "img":"./images/Venugopal/Jagshana.jpg",
       "location": "Chennai"
    },
    {
@@ -764,7 +764,7 @@
       "name":"Karthikeyan",
       "title":"Meghala",
       "parent":"eb",
-      "img":"",
+      "img":"./images/Gurusamy/Karthi.jpg",
       "location": "London"
    },
    {
@@ -772,7 +772,7 @@
       "name":"Neharika",
       "title":"👧",
       "parent":"ebi",
-      "img":"",
+      "img":"./images/Gurusamy/Neharika.jpg",
       "location": "London"
    },
    {
@@ -780,7 +780,7 @@
       "name":"Vivekananthan",
       "title":"Bhagyalakshmi",
       "parent":"eb",
-      "img":"",
+      "img":"./images/Gurusamy/Vivek.jpg",
       "location": "Bengaluru"
    },
    {
@@ -788,7 +788,7 @@
       "name":"Lithisha",
       "title":"👧",
       "parent":"ebii",
-      "img":"",
+      "img":"./images/Gurusamy/Lithisha.jpg",
       "location": "Bengaluru"
    },
    {
@@ -956,7 +956,7 @@
       "name":"Vasudevan",
       "title":"Sumithra",
       "parent":"f",
-      "img":"",
+      "img":"./images/Nataraj/Vasudevan.jpg",
       "location": "Omalur"
    },
    {
@@ -1308,7 +1308,7 @@
       "title":"👧",
       "parent":"kc",
       "img":"",
-      "location": "Coimbatare"
+      "location": "Coimbatore"
    },
    {
       "id":"kd",
