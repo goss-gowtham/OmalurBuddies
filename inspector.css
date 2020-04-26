@@ -95,6 +95,8 @@ body {
     background: #8e9eab;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #e0f7d2 50%, #c9e1f5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #e0f7d2 50%, #c9e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: 0;
+    position:relative;
 }
 
 #tree {
@@ -106,7 +108,8 @@ svg {
 }
 
 body::-webkit-scrollbar {
-  width: 0.5 em;
+  width: 1 em;
+  background-color: #c9e1f5;
 }
 
 body::-webkit-scrollbar-track {
@@ -114,8 +117,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-background-color: darkgrey;
-outline: 1px solid slategrey;
+background-color: #66baff;
+outline: 1px solid rgb(85, 166, 248);
 }
 
 .navbar{
@@ -191,4 +194,12 @@ h5 {
 
 .carousel-caption {
   background-color: #00000061 !important;
+}
+
+.search-img {
+  object-fit: cover; 
+  background: #c9e1f5 url('./images/home/perumal.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }

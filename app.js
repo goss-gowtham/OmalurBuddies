@@ -245,7 +245,7 @@ d3.tree().nodeSize([dx*4, dy])
   {
     id: 'c',
     name: 'Rajannan',
-    title: 'Chennammal',
+    title: 'Saraswathi',
     parent: 'a',
     img: ''
   },
@@ -268,7 +268,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Natarajan',
     title: 'Saraswathi',
     parent: 'a',
-    img: ''
+    img: './images/Nataraj/Nataraj.jpg'
   },
   {
     id: 'g',
@@ -429,7 +429,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Audvik',
     title: '👨',
     parent: 'bciii',
-    img: './images/Govindaraju/Aishwarya.jpg'
+    img: './images/Govindaraju/Audvik.jpg'
   },
   {
     id: 'bd',
@@ -534,7 +534,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Anupriya',
     title: 'Krishnaraj',
     parent: 'be',
-    img: ''
+    img: './images/Govindaraju/Anu.jpg'
   },
   {
     id: 'beiia',
@@ -607,18 +607,60 @@ d3.tree().nodeSize([dx*4, dy])
     img: './images/Govindaraju/Ganesh.jpg'
   },
   {
+    id: 'ca',
+    name: 'Pushpa',
+    title: 'Please update',
+    parent: 'c',
+    img: ''
+  },
+  {
+    id: 'cb',
+    name: 'Ravichandran',
+    title: 'Please update',
+    parent: 'c',
+    img: ''
+  },
+  {
+    id: 'cc',
+    name: 'Gunasekaran',
+    title: 'Please update',
+    parent: 'c',
+    img: ''
+  },
+  {
+    id: 'cd',
+    name: 'Padma',
+    title: 'Please update',
+    parent: 'c',
+    img: ''
+  },
+  {
+    id: 'ce',
+    name: 'Shanthi',
+    title: 'Please update',
+    parent: 'c',
+    img: ''
+  },
+  {
+    id: 'cf',
+    name: 'Janarthanan',
+    title: 'Please update',
+    parent: 'c',
+    img: ''
+  },
+  {
     id: 'da',
     name: 'Subramanian',
     title: 'Chamundeshwari',
     parent: 'd',
-    img: ''
+    img: './images/Venugopal/Subramanian.jpg'
   },
   {
     id: 'dai',
     name: 'Venugopal',
     title: 'Soundarya',
     parent: 'da',
-    img: ''
+    img: './images/Venugopal/Vignesh.jpg'
   },
   {
     id: 'daia',
@@ -646,13 +688,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Lakshman',
     title: 'Shanthi',
     parent: 'da',
-    img: ''
-  },{
+    img: './images/Venugopal/Lakshman.jpg'
+  },
+  {
     id: 'db',
     name: 'Siddaraj',
     title: 'Leelavathi',
     parent: 'd',
-    img: ''
+    img: './images/Venugopal/Leela.jpg'
   },
   {
     id: 'dbi',
@@ -792,7 +835,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Vijay Ranjan',
     title: '👨',
     parent: 'de',
-    img: './images/Venugopal/Vijayranjan.jpg'
+    img: './images/Venugopal/Vijayranjan.png'
   },
   {
     id: 'deia',
@@ -967,7 +1010,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Suseela',
     title: 'Suryaprakash',
     parent: 'e',
-    img: ''
+    img: './images/Gurusamy/Susi.jpg'
   },
   {
     id: 'edi',
@@ -1044,14 +1087,21 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Kumar',
     title: 'Punithavathi',
     parent: 'f',
-    img: ''
+    img: './images/Nataraj/Kumar.jpg'
   },
   {
     id: 'fbi',
     name: 'Gowripriya',
     title: 'Shivakumar',
     parent: 'fb',
-    img: ''
+    img: './images/Nataraj/Gowri.jpg'
+  },
+  {
+    id: 'fbia',
+    name: 'Thara',
+    title: '👧',
+    parent: 'fbi',
+    img: './images/Nataraj/Thara.jpg'
   },
   {
     id: 'fbii',
@@ -1128,28 +1178,28 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Gopikanandini',
     title: 'Sampath Kumar',
     parent: 'g',
-    img: ''
+    img: './images/Krishnaraj/Nandhini.jpg'
   },
   {
     id: 'gai',
-    name: 'Shridar',
-    title: 'Boomi',
+    name: 'Sreedharan',
+    title: 'Bommi',
     parent: 'ga',
-    img: ''
+    img: './images/Krishnaraj/Sreedharan.jpg'
   },
   {
     id: 'gaia',
-    name: 'Vishanth',
+    name: 'Visanth',
     title: '👨',
     parent: 'gai',
-    img: ''
+    img: './images/Krishnaraj/Visanth.jpg'
   },
   {
     id: 'gaii',
     name: 'Parthiban',
     title: 'Aishwarya',
     parent: 'ga',
-    img: ''
+    img: './images/Krishnaraj/Parthiban.jpg'
   },
   {
     id: 'gb',

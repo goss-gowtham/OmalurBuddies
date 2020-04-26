@@ -21,7 +21,9 @@ $.getJSON( "data.json", function( json ) {
     
             jQuery.each(value, function (key, value) {
                 record += (' ' + value);
-            });           
+            });         
+            
+            console.log(tag2);  
     
             $(element).append($(tag).append($(tag2)));
         }
@@ -40,7 +42,7 @@ $.getJSON( "data.json", function( json ) {
     
             if (match) {
                 if(value.parent.startsWith('a')) {
-                    family = "Perumal's family"; 
+                    family = "Perumal's son"; 
                 } else if (value.parent.startsWith('b')) {
                     family = "Govindaraju's family";
                 } else if (value.parent.startsWith('d')) {
@@ -59,10 +61,12 @@ $.getJSON( "data.json", function( json ) {
                     family = "Ramdass's family";
                 } else if (value.parent.startsWith('k')) {
                     family = "Seethalakshmi's family";
-                } 
+                }
                 
                 $('.undraw').hide();
-                append_to_results('.results', '<div class="match col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 px-auto">', '<div class="card shadow-lg px-2 rounded-lg my-2 border-0" style="overflow: auto"><div class="card-horizontal"><div class="p-3"><img src="'+value.img+'" height="150px" width="150px" class="rounded-lg"></div><div class="card-body"><p class="mb-1">'+value.name+'</p><p class="p-0 text-muted" style="font-size:18px">'+value.title+'</p><p class="p-0 m-0 text-muted" style="font-size:18px"><img class="img-fluid" src="./images/home/location.png" height="30" width="30">'+value.location+'</p><span class="badge badge-success" style="font-size: 12px; opacity:0.7">'+family+'</span></div></div></div></div>', key, value);
+                append_to_results('.results', 
+                    '<div class="match col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 px-auto">',
+                    '<div class="card shadow-lg px-2 rounded-lg my-2 border-0" style="overflow: auto"><div class="card-horizontal"><div class="p-3"><img src="'+value.img+'" height="150px" width="150px" class="rounded-lg search-img"></div><div class="card-body"><p class="mb-1">'+value.name+'</p><p class="p-0 text-muted" style="font-size:18px">'+value.title+'</p><p class="p-0 m-0 text-muted" style="font-size:18px"><img class="img-fluid" src="./images/home/location.png" height="30" width="30">'+value.location+'</p><span class="badge badge-success" style="font-size: 14px; opacity:0.7;">'+family+'</span></div></div></div></div>', key, value);
             }
         }
     
@@ -73,11 +77,13 @@ $.getJSON( "data.json", function( json ) {
             var input_val = $(this).val();
     
             // If key pressed is not alphanumeric or backspace, early exit
-            if (!check_key_event(key_event) || input_val.length <= 2 || input_val == 'image') {
+            if (!check_key_event(key_event) || input_val.length <= 2 || input_val == 'image' || input_val == 'jpg' || input_val == 'png') {
                 return false;
             }
             // Clear list of results
             $('.match').remove();
+            console.log(input_val);
+            
     
             jQuery.each(json, function (key, value) { 
                 if (input_val.toLowerCase() == 'bangalore' || input_val.toLowerCase() == 'karnataka' || input_val.toLowerCase() == 'bang') {
@@ -95,6 +101,6 @@ $.getJSON( "data.json", function( json ) {
         }
     
         // Add event handler to the input field
-        $('.search_term').on('keyup blur change paste cut reset submit', search_autocomplete);
+        $('.search_term').on('keyup input blur change paste cut reset submit', search_autocomplete);
 });
 
