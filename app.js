@@ -20,7 +20,7 @@ md`# Omalur Family Tree - Collapsible
     .attr("viewBox", [-margin.left, -margin.top, width, dx])
     .style("font", "20px sans-serif")
     .style("user-select", "none");
-  console.log("This site is developed by Gowthamnarayanan S")
+  console.log("This site is developed by Gowthamnarayanan S. I've disabled inspect element for privacy, so please don't misuse the site.")
 
   const defs = svg
     .append("defs")
@@ -394,7 +394,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Uma Parvathi',
     title: '',
     parent: 'bc',
-    img: ''
+    img: './images/Govindaraju/Uma.jpg'
   },
   {
     id: 'bcii',
@@ -730,7 +730,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Jayalakshmi',
     title: 'Varadharajan',
     parent: 'd',
-    img: ''
+    img: './images/Venugopal/Jaya.jpg'
   },
   {
     id: 'dci',
@@ -744,7 +744,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Yuvarani',
     title: 'Karthikeyan',
     parent: 'dc',
-    img: ''
+    img: './images/Venugopal/Rani.jpg'
   },
   {
     id: 'dcia',
@@ -765,14 +765,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Loga Soujanya',
     title: '👧',
     parent: 'dcii',
-    img: ''
+    img: './images/Venugopal/Soujanya.jpg'
   },
   {
     id: 'dciib',
     name: 'Teerth Monish',
     title: '👨',
     parent: 'dcii',
-    img: ''
+    img: './images/Venugopal/Monish.jpg'
   },
   {
     id: 'dd',
@@ -909,7 +909,7 @@ d3.tree().nodeSize([dx*4, dy])
   },
   {
     id: 'eaiii',
-    name: 'Senthil',
+    name: 'Senthil Kumar',
     title: 'Lakshmi Priya',
     parent: 'ea',
     img: './images/Gurusamy/senthil.jpg'
@@ -1143,14 +1143,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Karthik(Chendraya)',
     title: 'Geetha',
     parent: 'fd',
-    img: ''
+    img: './images/Nataraj/Chendrai.jpg'
   },
   {
     id: 'fdia',
     name: 'Narendar',
     title: '👨',
     parent: 'fdi',
-    img: ''
+    img: './images/Nataraj/Naren.jpg'
   },
   {
     id: 'fe',

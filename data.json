@@ -188,7 +188,7 @@
       "name":"Uma Parvathi",
       "title":"",
       "parent":"bc",
-      "img":"",
+      "img":"./images/Govindaraju/Uma.jpg",
       "location": "Sorgam"
    },
    {
@@ -572,7 +572,7 @@
       "name":"Jayalakshmi",
       "title":"Varadharajan",
       "parent":"d",
-      "img":"",
+      "img":"./images/Venugopal/Jaya.jpg",
       "location": "Rasipuram"
    },
    {
@@ -588,7 +588,7 @@
       "name":"Yuvarani",
       "title":"Karthikeyan",
       "parent":"dc",
-      "img":"",
+      "img":"./images/Venugopal/Rani.jpg",
       "location": "Bengaluru"
    },
    {
@@ -612,7 +612,7 @@
       "name":"Loga Soujanya",
       "title":"👧",
       "parent":"dcii",
-      "img":"",
+      "img":"./images/Venugopal/Soujanya.jpg",
       "location": "Bengaluru"
    },
    {
@@ -620,7 +620,7 @@
       "name":"Teerth Mohnish",
       "title":"👨",
       "parent":"dcii",
-      "img":"",
+      "img":"./images/Venugopal/Monish.jpg",
       "location": "Bengaluru"
    },
    {
@@ -777,7 +777,7 @@
    },
    {
       "id":"eaiii",
-      "name":"Senthil",
+      "name":"Senthil Kumar",
       "title":"Lakshmi Priya",
       "parent":"ea",
       "img":"./images/Gurusamy/senthil.jpg",
@@ -1044,7 +1044,7 @@
       "name":"Karthik(Chendraya)",
       "title":"Geetha",
       "parent":"fd",
-      "img":"",
+      "img":"./images/Nataraj/Chendrai.jpg",
       "location": "Saudi Arabia"
    },
    {
@@ -1052,7 +1052,7 @@
       "name":"Narendar",
       "title":"👨",
       "parent":"fdi",
-      "img":"",
+      "img":"./images/Nataraj/Naren.jpg",
       "location": "Saudi Arabia"
    },
    {
