@@ -779,14 +779,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Saroja',
     title: 'Ramesh Babu',
     parent: 'd',
-    img: ''
+    img: './images/Venugopal/Saroja.jpg'
   },
   {
     id: 'ddi',
     name: 'Sujatha',
     title: 'Venugopal',
     parent: 'dd',
-    img: ''
+    img: './images/Venugopal/Suji.jpg'
   },
   {
     id: 'ddia',
@@ -1066,7 +1066,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Krishnamurthi',
     title: 'Usha Nandhini',
     parent: 'f',
-    img: ''
+    img: './images/Nataraj/Murthi.jpg'
   },
   {
     id: 'fai',
@@ -1157,7 +1157,7 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Venkatesan',
     title: 'Dhanalakshmi',
     parent: 'f',
-    img: ''
+    img: './images/Nataraj/Chenna.jpg'
   },
   {
     id: 'fei',
@@ -1430,14 +1430,14 @@ d3.tree().nodeSize([dx*4, dy])
     name: 'Nagasharmila',
     title: 'Madhavaraju',
     parent: 'k',
-    img: ''
+    img: './images/Seetha/Nagasharmila.jpg'
   },
   {
     id: 'kdi',
     name: 'Parthasarathi',
     title: '👨',
     parent: 'kd',
-    img: ''
+    img: './images/Seetha/Partha.jpg'
   }
 ]
 )});

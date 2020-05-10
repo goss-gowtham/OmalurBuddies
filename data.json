@@ -628,7 +628,7 @@
       "name":"Saroja",
       "title":"Ramesh Babu",
       "parent":"d",
-      "img":"",
+      "img":"./images/Venugopal/Saroja.jpg",
       "location": "Salem"
    },
    {
@@ -636,7 +636,7 @@
       "name":"Sujatha",
       "title":"Venugopal",
       "parent":"dd",
-      "img":"",
+      "img":"./images/Venugopal/Suji.jpg",
       "location": "Vembadithalam"
    },
    {
@@ -956,7 +956,7 @@
       "name":"Krishnamurthi",
       "title":"Usha Nandhini",
       "parent":"f",
-      "img":"",
+      "img":"./images/Nataraj/Murthi.jpg",
       "location": "Salem"
    },
    {
@@ -1060,7 +1060,7 @@
       "name":"Venkatesan",
       "title":"Dhanalakshmi",
       "parent":"f",
-      "img":"",
+      "img":"./images/Nataraj/Chenna.jpg",
       "location": "Omalur"
    },
    {
@@ -1371,7 +1371,7 @@
       "name":"Nagasharmila",
       "title":"Madhavaraju",
       "parent":"k",
-      "img":"",
+      "img":"./images/Seetha/Nagasharmila.jpg",
       "location": "Salem"
    },
    {
@@ -1379,7 +1379,7 @@
       "name":"Parthasarathi",
       "title":"👨",
       "parent":"kd",
-      "img":"",
+      "img":"./images/Seetha/Partha.jpg",
       "location": "Salem"
    }
 ]
