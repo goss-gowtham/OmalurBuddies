@@ -579,6 +579,13 @@ d3.tree().nodeSize([dx*4, dy])
     img: './images/Govindaraju/Sowmya.jpg'
   },
   {
+    id: 'bfia',
+    name: 'Dhanvith',
+    title: '👨',
+    parent: 'bfi',
+    img: ''
+  },
+  {
     id: 'bfii',
     name: 'Vijay Raghavan',
     title: '👨',
@@ -1074,6 +1081,13 @@ d3.tree().nodeSize([dx*4, dy])
     title: 'Peroli',
     parent: 'fa',
     img: './images/Nataraj/Perumal.jpg'
+  },
+  {
+    id: 'faia',
+    name: 'Periniyaazh',
+    title: '👧',
+    parent: 'fai',
+    img: './images/Nataraj/Periniyaazh.jpg'
   },
   {
     id: 'faii',

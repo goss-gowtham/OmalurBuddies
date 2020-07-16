@@ -400,6 +400,14 @@
       "location": "Chennai"
    },
    {
+      "id":"bfia",
+      "name":"Dhanvith",
+      "title":"👨",
+      "parent":"bfi",
+      "img":"",
+      "location": "Chennai"
+   },
+   {
       "id":"bfii",
       "name":"Vijay Raghavan",
       "title":"👨",
@@ -965,6 +973,14 @@
       "title":"Peroli",
       "parent":"fa",
       "img":"./images/Nataraj/Perumal.jpg",
+      "location": "Bengaluru"
+   },
+   {
+      "id":"faia",
+      "name":"Periniyaazh",
+      "title":"👧",
+      "parent":"fai",
+      "img":"./images/Nataraj/Periniyaazh.jpg",
       "location": "Bengaluru"
    },
    {
