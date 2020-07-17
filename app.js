@@ -1084,7 +1084,7 @@ d3.tree().nodeSize([dx*4, dy])
   },
   {
     id: 'faia',
-    name: 'Periniyaazh',
+    name: 'Periniyal',
     title: '👧',
     parent: 'fai',
     img: './images/Nataraj/Periniyaazh.jpg'
